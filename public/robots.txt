@@ -1,3 +1,21 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemaps
+Sitemap: https://adityavikam.netlify.app/sitemap.xml
+
+# Allow all web crawlers to access all content
+# Portfolio is public and should be indexed
+
+# Block access to source maps in production
+Disallow: /*.map$
+
+# Standard sections that should be crawled
+Allow: /
+Allow: /static/
+
+# Cache-friendly
+# Allow crawling of CSS and JS files
+Allow: /static/css/
+Allow: /static/js/
